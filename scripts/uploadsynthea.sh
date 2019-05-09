@@ -23,15 +23,15 @@ curl "$BASE_URL" \
 -X POST \
 --data @<(cat ../bundles/all-cms-cqm-bundle.json)
 
-for f in ../../synthea/output/fhir_stu3/*.json; 
-do 
-echo 'Posting' "$f";
-curl "$BASE_URL" \
--H "Accept: application/json" \
--H "Content-Type:application/json" \
--X POST \
---data @<(cat "$f")
-done
+# for f in ../../synthea/output/fhir_stu3/*.json; 
+# do 
+# echo 'Posting' "$f";
+# curl "$BASE_URL" \
+# -H "Accept: application/json" \
+# -H "Content-Type:application/json" \
+# -X POST \
+# --data @<(cat "$f")
+# done
 
 # # Connectathon
 # echo 'Posting Endpoint and Caching Valuesets'
